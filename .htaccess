@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /gerenshotel/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /gerenshotel/index.php [L]
+</IfModule>
+
+
+
+# protect ClsConexion.php
+<files ClsConexion.php>
+order allow,deny
+deny from all
+</files>
+
+
